@@ -1,0 +1,108 @@
+Continue from the current AI Explain project and finish the entire application.
+
+Treat the current project as the source of truth. Do not replace working features unnecessarily.
+
+Goal
+
+Make AI Explain a complete, real, student-focused AI learning app that is ready to test.
+
+Frontend
+
+Make sure the React interface includes:
+
+- AI Explain branding
+- Clean, modern, responsive design
+- Large question input
+- Explain button
+- Example questions
+- Thinking/loading state
+- AI answer display
+- Clear/reset button
+- Error messages
+- Mobile-friendly layout for Android phones
+- Keyboard-friendly input
+- Proper disabled states while a request is processing
+
+Backend
+
+Make sure this endpoint works:
+
+"POST /api/explain"
+
+It must:
+
+1. Receive the user's question.
+2. Validate that the question is not empty.
+3. Send the question to the configured AI service.
+4. Return the AI answer in a consistent JSON response.
+5. Handle API errors safely.
+6. Never expose secrets or API credentials to the browser.
+7. Never log secret keys.
+
+Use Replit's managed AI connection/environment configuration where available. Do not hard-code API keys.
+
+AI behavior
+
+The AI should act as a helpful student tutor.
+
+For every question:
+
+- Give an accurate direct answer.
+- Explain it in simple language.
+- Break complicated subjects into steps.
+- Show working for maths and science when appropriate.
+- Give examples when useful.
+- Ask for clarification when the question is unclear.
+- Do not invent facts.
+
+API efficiency
+
+Prevent unnecessary API usage:
+
+- Only call the AI after the user presses Explain.
+- Prevent duplicate submissions.
+- Disable Explain while processing.
+- Do not automatically call the AI on page load.
+- Do not repeatedly retry failed requests.
+- Handle quota/rate-limit errors gracefully.
+
+Error handling
+
+Display friendly messages for:
+
+- Empty question
+- Network failure
+- Server error
+- AI service error
+- Rate limit or quota error
+
+Do not display secret credentials or sensitive server information.
+
+Reset
+
+The Clear button must completely reset:
+
+- Question input
+- Current answer
+- Error message
+- Loading state
+
+Final testing
+
+Before declaring the project complete:
+
+1. Install all required dependencies.
+2. Run the application.
+3. Check for TypeScript/JavaScript errors.
+4. Check for frontend errors.
+5. Check that "/api/explain" works.
+6. Test an example question.
+7. Test an empty question.
+8. Test the Clear button.
+9. Test the loading state.
+10. Fix all errors you find.
+11. Make sure the app works correctly on a phone-sized screen.
+
+Do not just describe what needs to be done. Actually implement the changes, run the tests, and fix problems you find.
+
+When everything is working, give me a short summary of what was completed and tell me exactly how to run and test the finished app in Replit.
