@@ -1,0 +1,86 @@
+Build a complete, functional web app called AI Explain.
+
+The app helps students understand questions and difficult topics in simple, accurate language.
+
+Main screen
+
+Create a clean, modern, mobile-friendly interface with:
+
+- App name: AI Explain
+- Subtitle: Understand anything, simply.
+- A large text input where users can type questions.
+- An Explain button.
+- Example questions users can tap.
+- A loading state showing Thinking...
+- An answer section for the AI response.
+- A Clear button.
+
+AI functionality
+
+Connect the app to the OpenAI API through a secure backend.
+
+Create:
+
+"POST /api/explain"
+
+The endpoint should receive the user's question, send it to the OpenAI API, and return the AI's answer.
+
+Use the environment variable:
+
+"OPENAI_API_KEY"
+
+Never put the API key directly in frontend code or commit it to GitHub.
+
+AI behavior
+
+The AI should:
+
+- Answer the question accurately.
+- Explain difficult topics in simple language.
+- Give the direct answer first.
+- Break explanations into clear steps when useful.
+- Give examples when helpful.
+- For mathematics and science, show the important working steps.
+- If a question is unclear, ask the user to clarify.
+- Avoid inventing information.
+
+API usage
+
+Use API requests efficiently.
+
+- Only call the API when the user presses Explain.
+- Do not call the API automatically when the page loads.
+- Prevent duplicate requests while an answer is loading.
+- Do not repeatedly retry failed requests.
+- Show a clear error if the API quota or usage limit is reached.
+- Do not create fake unlimited API usage.
+- Keep the AI provider/model easy to change later.
+
+User experience
+
+- Disable the Explain button while processing.
+- Allow another question after an answer is displayed.
+- Clear the question and answer when Clear is pressed.
+- Make the app responsive on Android phones, tablets, and computers.
+- Keep the design simple, clean, and easy for students to use.
+
+Technical requirements
+
+Use React for the frontend and a suitable Node.js backend if appropriate.
+
+Create a real working application, not just a visual mockup.
+
+Install all required dependencies.
+
+Configure the project so it can run directly in Replit.
+
+After building the app:
+
+1. Run the application.
+2. Check the frontend and backend for errors.
+3. Fix any errors you find.
+4. Test the "/api/explain" endpoint.
+5. Make sure the Explain button sends the user's question.
+6. Make sure the AI response appears correctly on the screen.
+
+Do not ask me to write the code manually unless absolutely necessary. Build the working app for me and explain what you changed after completing it.
